@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+    <script src = "./js/Interfaz.js"></script>
+    <link href="css/estilo.css" rel="stylesheet">
+</head>
+
+    <header>
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <h1 id="tlt">Formulario</h1>
+            <button class="btnCerrar">Cerrar sesion</button>
+            <form  action="nosotros.html">
+                <button type="submit" class="btnSignin" >Nosotros</button>
+            </form>
+            
+            
+            <div class="botons">
+        </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</header>
+<body></body>
+<div class="Dfrom">
+    <span id="tm">Periodo Abril 2013 a Junio 2021</span>
+    <div class="nombres1">
+    <span id="tm">Total de Homicidios en Michoacan:</span>
+    <span class="michoacan"></span>
+    <br>
+    <span id="tn">Total de Homicidios en Nayarit:</span>
+    <span class="nayarit"></span>
+    <br>
+</div>
+<br>
+
+    <p class="a">K <input type="text" name="K" id="K"/></p>
+    <p class="a">J <input type="text" name="J" id="J"/></p>
+    <p class="a">M <input type="text" name="M" id="M"/></p>
+    <div class="select">
+    <select name="cars" id="cars">
+        <option value="select">Selecciona una opcion</option>
+        <option value="PS">PS</option>
+        <option value="PMS">PMS</option>
+        <option value="PMD">PMD</option>
+        <option value="PMDA">PMDA</option>
+        <option value="PTMAC">PTMAC</option>
+        <option value="SE">SE</option>
+      </select>
+    </div>
+      <button class="btnEnviar" id="btnEnviar">enviar</button>
+    </div>
+    <div class="DGrafica">
+        <p id="grafica" class="titulo"></p>
+        <p id="Patron1" class="texto"></p>
+        <p id="Patron2" class="texto"></p>
+        <br>
+        <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+        <br>
+        <p id="Diferencia" class="texto"></p>
+        <p id="Porcentaje" class="texto"></p>
+        <br>
+        <canvas id="myChartPie" style="width:100%;max-width:700px"></canvas>
+        
+        
+        <br>
+        <br>
+        <br>
+        <p id="Pronostico" class="titulo"></p>
+        <p id="PronosticoResultadoM" class="texto"></p>
+        <p id="PronosticoResultadoN" class="texto"></p>
+        <p id="errorMedioM" class="texto"></p>
+        <p id="errorMedioN" class="texto"></p>
+        <br>
+        <canvas id="myChart1" style="width:100%;max-width:900px"></canvas>
+        <br>
+        <p id="mejorPronostico" class="titulo"></p>
+        <p id="mejorPronosticoResultadoM" class="texto"></p>
+        <p id="mejorPronosticoResultadoN" class="texto" ></p>
+        <p id="errorMejorM" class="texto"></p>
+        <p id="errorMejorN" class="texto"></p>
+        <br>
+        <canvas id="myChart2" style="width:100%;max-width:900px"></canvas>
+        <br>
+        <canvas id="myChartBar1" style="width:100%;max-width:900px"></canvas>
+        <br>
+        <canvas id="myChartBar" style="width:100%;max-width:900px"></canvas>
+        <br>
+
+        <button id="btn">Generar PDF</button>
+        <script>
+            let btn = document.getElementById('btn');
+         let page = document.getElementById('grafica');
+         
+         btn.addEventListener('click', function(){
+             const grafica = document.body; // <-- Aquí puedes elegir cualquier elemento del DOM
+             html2PDF(grafica, {
+            jsPDF: {
+                unit: "in",
+                format: 'a3',
+                orientation: 'portrait'
+            },
+            html2canvas: {
+                    scale: 3, // A mayor escala, mejores gráficos, pero más peso
+                    letterRendering: true,
+            },
+            margin: 1,
+            imageType: 'image/jpeg',
+            output: './pdf/Reporte.pdf'
+          });
+        });
+         </script>        
+    </div>
+    <br>
+    <p id="tablas1" class="titulo"></p>
+    <br><br>
+</body>
+</html>

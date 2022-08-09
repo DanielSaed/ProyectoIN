@@ -1,0 +1,77 @@
+{
+    "empleados": [{ 
+        "id": 1,
+        "name": "Luis",
+        "last_name": "Montes Moreno",
+        "phone": "4426008745",
+        "email": "Luis.oz@outlook.com",
+        "direction": "Av. de la Luz"
+
+    }, {
+
+        "id": 2,
+        "name": "Pablo Jair",
+        "last_name": "Ortiz Gomez",
+        "phone": "4422009775",
+        "email": "Pato@outlook.com",
+        "direction": "San Jose de los Olvera"
+    }, {
+        "id": 3,
+        "name": "Mauricio",
+        "last_name": "Saldivar Sanchez",
+        "phone": "4424899645",
+        "email": "IO.pack@gmail.com",
+        "direction": "Av. Constituyentes"
+    },  {
+        "id": 4,
+        "name": "Milton",
+        "last_name": "Hernandez Ibarra",
+        "phone": "4427886678",
+        "email": "Isai.yet@gmail.com",
+        "direction": "Hercules"
+    },  {
+        "id": 5,
+        "name": "Carlos",
+        "last_name": "Cruz Sanchez",
+        "phone": "4426825690",
+        "email": "Uzumaki@gmail.com",
+        "direction": "Candiles"
+    },  {
+        "id": 6,
+        "name": "Viridiana",
+        "last_name": "Trenado Sanchez",
+        "phone": "4423678977",
+        "email": "Adita.put@gmail.com",
+        "direction": "El pueblito"
+    },  {
+        "id": 7,
+        "name": "Denisse",
+        "last_name": "Arreola Arreola",
+        "phone": "4426076543",
+        "email": "Cielo@gmail.com",
+        "direction": "Lomas del Mirador"
+    },  {
+        "id": 8,
+        "name": "Paola",
+        "last_name": "Hernández Guerrero",
+        "phone": "4422869254",
+        "email": "paola.366@outlook.com",
+        "direction": "Carrillo"
+    },  {
+        "id": 9,
+        "name": "Laura Damaris",
+        "last_name": "Maldonado Navarro",
+        "phone": "4426005798",
+        "email": "DamaG.260@outlook.com",
+        "direction": "Plutarco Elias Calles"
+    },  {
+        "id": 10,
+        "name": "Claudia",
+        "last_name": "Trejo Portillo",
+        "phone": "4422567032",
+        "email": "Neko.032@gmail.com",
+        "direction": "San Rosa de Jáuregui"
+    }
+
+    ]
+}
